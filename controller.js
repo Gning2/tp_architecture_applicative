@@ -8,7 +8,7 @@ document.getElementById('task-form').addEventListener('submit', (event) => {
     if (description !== '' && category !== 'Sélectionner une catégorie') {
         taskManager.addTask(description, category);
         taskInput.value = '';
-        renderTasks();  // Afficher toutes les tâches après l'ajout
+        renderTasks();  
         categorySelect.selectedIndex = 0;
     }
 });
@@ -18,8 +18,8 @@ document.getElementById('filter-button').addEventListener('click', () => {
     const selectedCategory = categorySelect.value;
 
     if (categorySelect.selectedIndex !== 0) {
-        renderTasks(selectedCategory);  // Filtrer les tâches par catégorie
+        renderTasks(selectedCategory); 
     } else {
-        renderTasks();  // Afficher toutes les tâches si aucune catégorie n'est sélectionnée
+        renderTasks();
     }
 });

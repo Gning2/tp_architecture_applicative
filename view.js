@@ -44,7 +44,6 @@ function renderTasks(filterCategory = null) {
     let tasksToRender = taskManager.getAllTasks();
 
     if (filterCategory && filterCategory !== 'Sélectionner une catégorie') {
-        // Filtrer les tâches par catégorie sélectionnée
         tasksToRender = tasksToRender.filter(task => task.category === filterCategory);
     }
 
